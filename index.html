@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sonicofficial — Links</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: white;
+            background-image: radial-gradient(circle at center, #111 0%, #000 100%);
+            overflow-x: hidden;
+        }
+
+        /* Overlay Styles */
+        #lang-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: #000;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            transition: opacity 0.5s ease;
+        }
+
+        .lang-btn {
+            background: #111;
+            border: 1px solid #333;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-radius: 8px;
+            width: 200px;
+        }
+
+        .lang-btn:hover {
+            background: #222;
+            transform: scale(1.05);
+            border-color: #555;
+        }
+
+        #main-content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .custom-btn {
+            transition: all 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .custom-btn:hover {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+            border-color: rgba(255,255,255,0.5);
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        }
+
+        .animate-fade-up {
+            animation: fadeUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 relative">
+
+    <!-- Language Overlay -->
+    <div id="lang-overlay">
+        <h1 class="text-2xl mb-4 font-bold text-gray-300">SELECT LANGUAGE</h1>
+        <button class="lang-btn" onclick="selectLanguage('en')">ENGLISH</button>
+        <button class="lang-btn" onclick="selectLanguage('ru')">РУССКИЙ</button>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content" class="w-full flex flex-col xl:block items-center relative">
+
+        <main class="relative z-10 w-full max-w-md flex flex-col gap-5 items-center mx-auto xl:mx-auto">
+            
+            <!-- Header Section -->
+            <div class="mb-8 text-center animate-fade-up w-full">
+                <!-- LOGO -->
+                <div class="w-28 h-28 mx-auto mb-5 rounded-full flex items-center justify-center border-4 border-black shadow-2xl overflow-hidden relative group bg-black">
+                    <img src="https://github.com/sonicreally/site/blob/main/sonic.png?raw=true" 
+                         alt="Logo" class="w-full h-full object-cover">
+                </div>
+                
+                <h1 class="text-3xl font-extrabold uppercase tracking-wide mb-3">sonicofficial</h1>
+                <p id="desc-text" class="text-gray-300 text-sm font-medium leading-relaxed max-w-xs mx-auto">
+                    привет, я соник!! я делаю игры в роблоксе и делаю видео!
+                </p>
+            </div>
+
+            <!-- Buttons Container -->
+            <div class="flex flex-col gap-3 w-full max-w-sm mx-auto">
+
+                <!-- YOUTUBE BUTTON -->
+                <a href="https://www.youtube.com/@SonicReal" target="_blank" 
+                   class="animate-fade-up delay-100 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300 bg-[#FF0000]">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
+                        <img src="https://cdn.prod.website-files.com/63734fce0109ae1b7967dc8e/637454ffc09b2340da480c9c_icon-youtube.png" 
+                             alt="YouTube" class="w-full h-full object-contain drop-shadow-md">
+                    </div>
+                    <div class="text-left flex-grow">
+                        <div class="text-lg font-bold tracking-wide">YOUTUBE</div>
+                    </div>
+                </a>
+
+                <!-- ROBLOX BUTTON -->
+                <a href="https://www.roblox.com/users/858106239/profile" target="_blank" 
+                   class="animate-fade-up delay-200 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300"
+                   style="background-color: #335fff;">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
+                        <img src="https://github.com/sonicreally/site/blob/main/roblox.png?raw=true" 
+                             alt="Roblox" class="w-full h-full object-contain drop-shadow-md">
+                    </div>
+                    <div class="text-left flex-grow">
+                        <div class="text-lg font-bold tracking-wide">ROBLOX</div>
+                    </div>
+                </a>
+
+                <!-- TELEGRAM BUTTON -->
+                <a href="https://t.me/sonicrealtg" target="_blank" 
+                   class="animate-fade-up delay-300 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300"
+                   style="background-color: #29a9ea;">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
+                        <img src="https://raw.githubusercontent.com/sonicreally/site/refs/heads/main/tg.png" 
+                             alt="Telegram" class="w-full h-full object-contain drop-shadow-md">
+                    </div>
+                    <div class="text-left flex-grow">
+                        <div class="text-lg font-bold tracking-wide">TELEGRAM</div>
+                    </div>
+                </a>
+
+            </div>
+
+        </main>
+
+        <!-- Left Widget (Fixed on Desktop Left, Static at Bottom on Mobile) -->
+        <aside class="w-full max-w-sm mt-8 mx-auto xl:mx-0 xl:mt-0 xl:fixed xl:left-10 xl:top-1/2 xl:-translate-y-1/2 xl:w-72 animate-fade-up delay-400 flex flex-col gap-6">
+            
+            <!-- Fidgets -->
+            <div>
+                <h2 id="fidget-title" class="text-center text-sm font-bold text-gray-500 mb-3 tracking-widest uppercase xl:text-left xl:pl-1">
+                    вот вам потыкать
+                </h2>
+                <div class="bg-[#111] border border-[#333] rounded-lg p-4 shadow-lg flex flex-col gap-4">
+                    
+                    <!-- Clicker -->
+                    <button id="poke-btn" class="w-full bg-[#1a1a1a] hover:bg-[#252525] text-white font-bold py-3 px-4 rounded border border-[#333] transition-all active:scale-95 flex justify-between items-center group relative overflow-hidden">
+                        <span id="poke-text" class="relative z-10">ТЫК!</span>
+                        <span id="poke-count" class="relative z-10 bg-white/10 text-gray-300 text-xs py-1 px-2 rounded font-mono">0</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/0 via-blue-900/30 to-blue-900/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                    </button>
+
+                    <!-- Random Sliders -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                             <input type="range" class="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-white opacity-60 hover:opacity-100">
+                        </div>
+                        <div class="flex justify-between items-center gap-2">
+                            <button class="flex-1 h-8 bg-[#1a1a1a] border border-[#333] rounded hover:bg-[#333] active:bg-blue-600 transition-colors"></button>
+                            <button class="flex-1 h-8 bg-[#1a1a1a] border border-[#333] rounded hover:bg-[#333] active:bg-red-600 transition-colors"></button>
+                            <button class="flex-1 h-8 bg-[#1a1a1a] border border-[#333] rounded hover:bg-[#333] active:bg-green-600 transition-colors"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timers -->
+            <div>
+                <h2 id="timers-title" class="text-center text-sm font-bold text-gray-500 mb-3 tracking-widest uppercase xl:text-left xl:pl-1">
+                    таймеры
+                </h2>
+                <div class="bg-[#111] border border-[#333] rounded-lg p-4 shadow-lg flex flex-col gap-4 font-mono text-xs">
+                    
+                    <!-- Birthday -->
+                    <div>
+                        <div class="flex justify-between text-gray-400 mb-1">
+                            <span id="label-bday">🎂 ДЕНЬ РОЖДЕНИЯ (11 ДЕК 2026)</span>
+                        </div>
+                        <div id="timer-bday" class="text-white text-sm bg-[#1a1a1a] p-2 rounded border border-[#222] text-center">
+                            ...
+                        </div>
+                    </div>
+
+                    <!-- New Year -->
+                    <div>
+                        <div class="flex justify-between text-gray-400 mb-1">
+                            <span id="label-ny">🎄 НОВЫЙ ГОД (2027)</span>
+                        </div>
+                        <div id="timer-ny" class="text-white text-sm bg-[#1a1a1a] p-2 rounded border border-[#222] text-center">
+                            ...
+                        </div>
+                    </div>
+
+                    <!-- Summer -->
+                    <div>
+                        <div class="flex justify-between text-gray-400 mb-1">
+                            <span id="label-summer">☀️ ЛЕТО (2026)</span>
+                        </div>
+                        <div id="timer-summer" class="text-white text-sm bg-[#1a1a1a] p-2 rounded border border-[#222] text-center">
+                            ...
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <script>
+        // Translations
+        const translations = {
+            ru: {
+                desc: "привет, я соник!! я делаю игры в роблоксе и делаю видео!",
+                fidget: "вот вам потыкать",
+                poke: "ТЫК!",
+                timers: "таймеры",
+                bday: "🎂 ДЕНЬ РОЖДЕНИЯ (11 ДЕК 2026)",
+                ny: "🎄 НОВЫЙ ГОД (2027)",
+                summer: "☀️ ЛЕТО (2026)"
+            },
+            en: {
+                desc: "hi, i'm sonic!! i make roblox games and videos!",
+                fidget: "click here",
+                poke: "CLICK!",
+                timers: "timers",
+                bday: "🎂 BIRTHDAY (DEC 11 2026)",
+                ny: "🎄 NEW YEAR (2027)",
+                summer: "☀️ SUMMER (2026)"
+            }
+        };
+
+        // Language Selector
+        function selectLanguage(lang) {
+            const overlay = document.getElementById('lang-overlay');
+            const content = document.getElementById('main-content');
+            
+            // Apply text
+            document.getElementById('desc-text').innerText = translations[lang].desc;
+            document.getElementById('fidget-title').innerText = translations[lang].fidget;
+            document.getElementById('poke-text').innerText = translations[lang].poke;
+            document.getElementById('timers-title').innerText = translations[lang].timers;
+            document.getElementById('label-bday').innerText = translations[lang].bday;
+            document.getElementById('label-ny').innerText = translations[lang].ny;
+            document.getElementById('label-summer').innerText = translations[lang].summer;
+
+            // Hide overlay, show content
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                overlay.style.display = 'none';
+                content.style.opacity = '1';
+                // Trigger animations manually if needed, or let CSS handle fade-in
+                // The CSS animation starts on load, but opacity 0 on wrapper hides it. 
+                // We'll let it flow.
+            }, 500);
+        }
+
+        // Poker Logic
+        let pokes = 0;
+        const pokeBtn = document.getElementById('poke-btn');
+        const pokeCount = document.getElementById('poke-count');
+        
+        pokeBtn.addEventListener('click', () => {
+            pokes++;
+            pokeCount.innerText = pokes;
+            
+            const colors = ['#ef4444', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6'];
+            const rand = colors[Math.floor(Math.random() * colors.length)];
+            pokeBtn.style.borderColor = rand;
+            setTimeout(() => {
+                pokeBtn.style.borderColor = '#333';
+            }, 300);
+        });
+
+        // Timer Logic
+        function updateTimers() {
+            // Target Dates (Moscow Time UTC+3)
+            // Birthday: 11 Dec 2026
+            const bdayDate = new Date('2026-12-11T00:00:00+03:00');
+            
+            // New Year: 2027 (Jan 1, 2027)
+            const nyDate = new Date('2027-01-01T00:00:00+03:00');
+            
+            // Summer: 1 June 2026
+            const summerDate = new Date('2026-06-01T00:00:00+03:00');
+
+            function getTimeRemaining(endtime) {
+                const total = Date.parse(endtime) - Date.now();
+                if (total < 0) return { total: -1 };
+                const seconds = Math.floor((total / 1000) % 60);
+                const minutes = Math.floor((total / 1000 / 60) % 60);
+                const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+                const days = Math.floor(total / (1000 * 60 * 60 * 24));
+                return { total, days, hours, minutes, seconds };
+            }
+
+            function formatTime(t) {
+                if (t.total < 0) return "00д 00ч 00м 00с";
+                return `${t.days}д ${t.hours}ч ${t.minutes}м ${t.seconds}с`;
+            }
+
+            document.getElementById('timer-bday').innerText = formatTime(getTimeRemaining(bdayDate));
+            document.getElementById('timer-ny').innerText = formatTime(getTimeRemaining(nyDate));
+            document.getElementById('timer-summer').innerText = formatTime(getTimeRemaining(summerDate));
+        }
+
+        setInterval(updateTimers, 1000);
+        updateTimers();
+    </script>
+
+</body>
+</html>
