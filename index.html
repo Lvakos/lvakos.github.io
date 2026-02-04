@@ -97,9 +97,8 @@
 
     <!-- Language Overlay -->
     <div id="lang-overlay">
-        <h1 class="text-2xl mb-4 font-bold text-gray-300">SELECT LANGUAGE</h1>
         <button class="lang-btn" onclick="selectLanguage('en')">ENGLISH</button>
-        <button class="lang-btn" onclick="selectLanguage('ru')">РУССКИЙ</button>
+        <button class="lang-btn" onclick="selectLanguage('ru')">RUSSIAN</button>
     </div>
 
     <!-- Main Content Wrapper -->
@@ -111,13 +110,12 @@
             <div class="mb-8 text-center animate-fade-up w-full">
                 <!-- LOGO -->
                 <div class="w-28 h-28 mx-auto mb-5 rounded-full flex items-center justify-center border-4 border-black shadow-2xl overflow-hidden relative group bg-black">
-                    <img src="https://github.com/sonicreally/site/blob/main/sonic.png?raw=true" 
+                    <img src="https://github.com/Lvakos/lvakos.github.io/blob/main/icon.png?raw=true" 
                          alt="Logo" class="w-full h-full object-cover">
                 </div>
                 
-                <h1 class="text-3xl font-extrabold uppercase tracking-wide mb-3">sonicofficial</h1>
+                <h1 class="text-3xl font-extrabold uppercase tracking-wide mb-3">maxxsem</h1>
                 <p id="desc-text" class="text-gray-300 text-sm font-medium leading-relaxed max-w-xs mx-auto">
-                    привет, я соник!! я делаю игры в роблоксе и делаю видео!
                 </p>
             </div>
 
@@ -125,7 +123,7 @@
             <div class="flex flex-col gap-3 w-full max-w-sm mx-auto">
 
                 <!-- YOUTUBE BUTTON -->
-                <a href="https://www.youtube.com/@SonicReal" target="_blank" 
+                <a href="https://www.youtube.com/@MaxxsemYT" target="_blank" 
                    class="animate-fade-up delay-100 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300 bg-[#FF0000]">
                     <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
                         <img src="https://cdn.prod.website-files.com/63734fce0109ae1b7967dc8e/637454ffc09b2340da480c9c_icon-youtube.png" 
@@ -136,22 +134,9 @@
                     </div>
                 </a>
 
-                <!-- ROBLOX BUTTON -->
-                <a href="https://www.roblox.com/users/858106239/profile" target="_blank" 
-                   class="animate-fade-up delay-200 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300"
-                   style="background-color: #335fff;">
-                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
-                        <img src="https://github.com/sonicreally/site/blob/main/roblox.png?raw=true" 
-                             alt="Roblox" class="w-full h-full object-contain drop-shadow-md">
-                    </div>
-                    <div class="text-left flex-grow">
-                        <div class="text-lg font-bold tracking-wide">ROBLOX</div>
-                    </div>
-                </a>
-
                 <!-- TELEGRAM BUTTON -->
-                <a href="https://t.me/sonicrealtg" target="_blank" 
-                   class="animate-fade-up delay-300 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300"
+                <a href="https://t.me/vlipsya" target="_blank" 
+                   class="animate-fade-up delay-200 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300"
                    style="background-color: #29a9ea;">
                     <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
                         <img src="https://raw.githubusercontent.com/sonicreally/site/refs/heads/main/tg.png" 
@@ -159,6 +144,19 @@
                     </div>
                     <div class="text-left flex-grow">
                         <div class="text-lg font-bold tracking-wide">TELEGRAM</div>
+                    </div>
+                </a>
+
+                <!-- GITHUB BUTTON -->
+                <a href="https://github.com/Lvakos" target="_blank"
+                     class="animate-fade-up delay-200 custom-btn flex items-center p-2 rounded-lg group hover:-translate-y-1 transition-transform duration-300"
+                   style="background-color: #ffffff;">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center p-2 mr-3">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
+                             alt="Github" class="w-full h-full object-contain drop-shadow-md">
+                    </div>
+                    <div class="text-left flex-grow">
+                        <div class="text-lg font-bold tracking-wide text-black">GITHUB</div>
                     </div>
                 </a>
 
@@ -207,7 +205,7 @@
                     <!-- Birthday -->
                     <div>
                         <div class="flex justify-between text-gray-400 mb-1">
-                            <span id="label-bday">🎂 ДЕНЬ РОЖДЕНИЯ (11 ДЕК 2026)</span>
+                            <span id="label-bday">🎂 ДЕНЬ РОЖДЕНИЯ (14 АВГ 2026)</span>
                         </div>
                         <div id="timer-bday" class="text-white text-sm bg-[#1a1a1a] p-2 rounded border border-[#222] text-center">
                             ...
@@ -245,20 +243,20 @@
         // Translations
         const translations = {
             ru: {
-                desc: "привет, я соник!! я делаю игры в роблоксе и делаю видео!",
+                desc: "Всем привет! Меня зовут Максим, и я учусь на программиста.",
                 fidget: "вот вам потыкать",
                 poke: "ТЫК!",
                 timers: "таймеры",
-                bday: "🎂 ДЕНЬ РОЖДЕНИЯ (11 ДЕК 2026)",
+                bday: "🎂 ДЕНЬ РОЖДЕНИЯ (14 АВГ 2026)",
                 ny: "🎄 НОВЫЙ ГОД (2027)",
                 summer: "☀️ ЛЕТО (2026)"
             },
             en: {
-                desc: "hi, i'm sonic!! i make roblox games and videos!",
+                desc: "Hello everyone! My name is Maksim, and I am studying to become a programmer.",
                 fidget: "click here",
                 poke: "CLICK!",
                 timers: "timers",
-                bday: "🎂 BIRTHDAY (DEC 11 2026)",
+                bday: "🎂 BIRTHDAY (AUG 14 2026)",
                 ny: "🎄 NEW YEAR (2027)",
                 summer: "☀️ SUMMER (2026)"
             }
@@ -308,9 +306,8 @@
 
         // Timer Logic
         function updateTimers() {
-            // Target Dates (Moscow Time UTC+3)
-            // Birthday: 11 Dec 2026
-            const bdayDate = new Date('2026-12-11T00:00:00+03:00');
+            // Birthday: 14 August 2026
+            const bdayDate = new Date('2026-08-14T00:00:00+03:00');
             
             // New Year: 2027 (Jan 1, 2027)
             const nyDate = new Date('2027-01-01T00:00:00+03:00');
